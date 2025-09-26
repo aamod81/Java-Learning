@@ -1,4 +1,4 @@
-public class constructor_40 {
+public class constructor_42 {
    static class MyEmployee {
        private int id = 5;
        private String name = "aamod" ;
