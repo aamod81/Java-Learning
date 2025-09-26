@@ -1,35 +1,50 @@
-package com.company;
+
 
 public class methodoverloading_32 {
-
-    // static method
-    static int logic(int x, int y) {
-        int z;
-        if (x > y) {
-            z = x + y;
-        } else {
-            z = (x + y) * 5;
-        }
-        x = 566; // this change won't affect original 'a' because of pass by value
-        return z;
+    static void foo(){
+        System.out.println("Good Morning bro !!");
+    }
+    static void foo(int a){
+        System.out.println("Good Morning " + a + " Bro!");
+    }
+    static void foo(int a, int b){
+        System.out.println("Good Morning " + a + " Bro!");
+        System.out.println("Good Morning " + b + " Bro!");
+    }
+    static void change(int a){
+        a=98;
+    }
+    static void change2(int [] arr){
+        arr[0]=98;
+    }
+    static void tellJoke() {
+        System.out.println("Why don’t programmers like nature? \n" +
+                "Because it has too many bugs!");
     }
 
     public static void main(String[] args) {
-        int a = 3;
-        int b = 4;
-        int c;
+        tellJoke();
+        int[] marks =new int[6];
+        marks[0]=52;
+        marks[1]=73;
+        marks[2]=77;
+        marks[3]=89;
+        marks[4]=98;
+        marks[5]=94;
+//        Case 1 : Changing the integer
+        int x=45;
+        change(x);
+        System.out.println(x);
+//        Case 2 : Changing the array
+        change2(marks);
+        System.out.println(marks[0]);
 
-        // call static method directly
-        c = logic(a, b);
-        System.out.println("Result: " + c);
-        System.out.println("a = " + a + " b = " + b); // 'a' and 'b' unchanged
+//        Method Overloading
+//        foo();
+//        foo(3000);
+//        foo(3000,4000);
 
-        int a1 = 2;
-        int a2 = 3;
-        int c1;
 
-        c1 = logic(a1, a2);
-        System.out.println("Result: " + c1);
-        System.out.println("a1 = " + a1 + " a2 = " + a2);
+
     }
 }
