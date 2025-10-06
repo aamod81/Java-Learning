@@ -1,0 +1,7 @@
+import java.util.ArrayList;
+
+public class collection_89 {
+    public static void main(String[] args) {
+        ArrayList<String> list = new ArrayList<String>();
+    }
+}
