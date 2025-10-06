@@ -5,5 +5,6 @@ public class dateClass_97 {
         Date d =new Date();
         System.out.println(d);
         System.out.println(d.getTime());
+
     }
 }
